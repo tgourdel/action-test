@@ -5,6 +5,6 @@ COPY entrypoint.sh /entrypoint.sh
 COPY maven-settings.xml /maven-settings.xml
 
 RUN mkdir -p /root/.installation
-RUN chmod 777 -R /root/.installation
+RUN chmod 777 -R /root
 
 ENTRYPOINT ["/entrypoint.sh"]
