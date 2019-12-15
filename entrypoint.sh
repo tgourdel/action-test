@@ -8,7 +8,6 @@ mkdir $HOME/secrets
 gpg --quiet --batch --yes --decrypt --passphrase="${INPUT_LICENSE_PASSPHRASE}" \
 --output $HOME/secrets/license $GITHUB_WORKSPACE/$LICENSE_PATH
 
-
 echo "You are going to build ${INPUT_PROJECT} project"
 echo "Maven Command: mvn -s /maven-settings.xml -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml -Pcloud-publisher clean deploy $*"
 

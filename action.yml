@@ -29,6 +29,13 @@ inputs:
     description: 'Publish screenshot to TMC'
     required: false
     default: 'true'
+  license_path:
+    description: 'Path of Talend license in your repository. Make sure to encrypt your license.'
+    required: yes
+    default: 'license.gpg'
+  license_passphrase:
+    description: 'Passphrase to decrypt Talend license in your repo. Make sure to store the passphrase in a secret.'
+    required: yes
 
 runs:
   using: 'docker'
