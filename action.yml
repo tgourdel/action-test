@@ -1,16 +1,45 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Talend Publish to Cloud Action'
+description: 'Publish to TMC'
+
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  project: 
+    description: 'Talend Cloud Project'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  job_name: 
+    description: 'Talend Cloud Job'
+    required: true
+  job_version: 
+    description: 'Talend Cloud Job version'
+    required: false
+    default: '0.1'
+  p2_url: 
+    description: 'Talend Cloud Job version'
+    required: true
+  cloud_url: 
+    description: 'Talend Cloud url'
+    required: true
+  cloud_token: 
+    description: 'Talend Cloud Access token'
+    required: true
+  nexus_url: 
+    description: 'Nexus URLS for custom libs and Maven plugins'
+    required: true
+  nexus_username: 
+    description: 'Nexus username'
+    required: true
+  nexus_password: 
+    description: 'Nexus passwords'
+    required: true
+  screenshot: 
+    description: 'Publish screenshot to TMC'
+    required: false
+    default: 'true'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+
+branding:
+  icon: 'award'  
+  color: 'green'
