@@ -11,6 +11,7 @@ gpg --quiet --batch --yes --decrypt --passphrase="${INPUT_LICENSE_PASSPHRASE}" \
 echo "You are going to build ${INPUT_PROJECT} project"
 echo $INPUT_P2_URL
 echo $JAVA_HOME
+echo $PATH
 
 export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license -Dupdatesite.path=${INPUT_P2_URL} -Dservice.url=${INPUT_CLOUD_URL} -Dcloud.token=${INPUT_CLOUD_TOKEN} -Dcloud.publisher.screenshot=${INPUT_SCREENSHOT}"
 echo $MAVEN_OPTS
