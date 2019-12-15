@@ -7,13 +7,6 @@ inputs:
   project: 
     description: 'Talend Cloud Project'
     required: true
-  job_name: 
-    description: 'Talend Cloud Job'
-    required: true
-  job_version: 
-    description: 'Talend Cloud Job version'
-    required: false
-    default: '0.1'
   p2_url: 
     description: 'Talend Cloud Job version'
     required: true
