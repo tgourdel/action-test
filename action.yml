@@ -1,6 +1,7 @@
 # action.yml
 name: 'Talend Publish to Cloud Action'
 description: 'Publish to TMC'
+author: tgourdel
 
 inputs:
   project: 
